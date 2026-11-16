@@ -2,8 +2,6 @@
 title: "When AI Doubles the Work: Six Lessons from Starbucks' Inventory Rollback"
 categories: ["Case Study"]
 tags: [ai-governance, computer-vision, inventory-management, retail, teaching-case]
-image: /assets/images/2026-11-16-starbucks-ai-rollback-cover.png
-image_alt: "Shakir reviewing today's case"
 excerpt: "Starbucks retired its AI-powered inventory-counting system after nine months across 11,000+ stores. Six lessons on why the AI met its vendor's accuracy claims on paper but still failed on the floor."
 ---
 

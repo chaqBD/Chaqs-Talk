@@ -70,6 +70,20 @@ a:hover { text-decoration: underline; }
   padding: 48px 0 20px;
   margin-bottom: 48px;
 }
+.site-header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+.site-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--border);
+  flex-shrink: 0;
+}
 .site-title {
   font-family: var(--serif);
   font-weight: 700;
@@ -292,4 +306,5 @@ blockquote {
   .site-header { padding-top: 32px; }
   .site-title { font-size: 1.6rem; }
   .post-title { font-size: 1.7rem; }
+  .site-avatar { width: 48px; height: 48px; }
 }
