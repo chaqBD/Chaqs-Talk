@@ -8,21 +8,18 @@ title: Home
 
 <ul class="post-list">
   {% for post in paginator.posts %}
+  {% assign primary_cat = post.categories | first %}
   <li class="post-list-item">
     <a class="post-list-link" href="{{ post.url | relative_url }}">
-      {% if post.categories.size > 0 %}
-      <div class="post-badges">
-        {% for cat in post.categories %}
-        <span class="badge badge--{{ cat | slugify }}">{{ cat }}</span>
-        {% endfor %}
+      <div class="post-list-media post-list-media--{{ primary_cat | slugify }}">{{ primary_cat }}</div>
+      <div class="post-list-body">
+        <p class="post-meta">
+          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
+        </p>
+        <h2 class="post-list-title">{{ post.title }}</h2>
+        <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 35 }}</p>
+        <span class="read-more">Read more &rarr;</span>
       </div>
-      {% endif %}
-      <h2 class="post-list-title">{{ post.title }}</h2>
-      <p class="post-meta">
-        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
-      </p>
-      <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 40 }}</p>
-      <span class="read-more">Read more &rarr;</span>
     </a>
   </li>
   {% endfor %}
