@@ -39,21 +39,11 @@ layout: default
   {% endif %}
 
   <section class="comments">
-    <script src="https://giscus.app/client.js"
-      data-repo="chaqBD/Chaqs-Talk"
-      data-repo-id="R_kgDOVwWjsA"
-      data-category="Announcements"
-      data-category-id="DIC_kwDOVwWjsM4DLQpY"
-      data-mapping="pathname"
-      data-strict="0"
-      data-reactions-enabled="1"
-      data-emit-metadata="0"
-      data-input-position="top"
-      data-theme="light"
-      data-lang="en"
-      crossorigin="anonymous"
-      async>
-    </script>
+    <script async src="https://talk.hyvor.com/embed/embed.js" type="module"></script>
+    <hyvor-talk-comments
+      website-id="16867"
+      page-id="{{ page.url | relative_url }}">
+    </hyvor-talk-comments>
   </section>
 </article>
 
