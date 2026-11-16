@@ -11,6 +11,9 @@ layout: default
     </div>
     {% endif %}
     <h1 class="post-title">{{ page.title }}</h1>
+    {% if page.citation %}
+    <p class="post-citation">{{ page.citation }}</p>
+    {% endif %}
     <p class="post-meta">
       <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>
       &middot; {{ page.author | default: site.author.name }}

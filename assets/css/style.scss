@@ -70,20 +70,6 @@ a:hover { text-decoration: underline; }
   padding: 48px 0 20px;
   margin-bottom: 48px;
 }
-.site-header-inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 20px;
-}
-.site-avatar {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 1px solid var(--border);
-  flex-shrink: 0;
-}
 .site-title {
   font-family: var(--serif);
   font-weight: 700;
@@ -187,6 +173,12 @@ a:hover { text-decoration: underline; }
   margin: 10px 0 10px;
 }
 .post-header { margin-bottom: 40px; }
+.post-citation {
+  font-size: 0.9rem;
+  font-style: italic;
+  color: var(--ink-soft);
+  margin: 8px 0 14px;
+}
 .post-content h2 {
   font-family: var(--serif);
   font-size: 1.4rem;
@@ -306,5 +298,4 @@ blockquote {
   .site-header { padding-top: 32px; }
   .site-title { font-size: 1.6rem; }
   .post-title { font-size: 1.7rem; }
-  .site-avatar { width: 28px; height: 28px; }
 }

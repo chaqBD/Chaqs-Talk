@@ -3,15 +3,11 @@ title: "When AI Doubles the Work: Six Lessons from Starbucks' Inventory Rollback
 categories: ["Case Study"]
 tags: [ai-governance, computer-vision, inventory-management, retail, teaching-case]
 excerpt: "Starbucks retired its AI-powered inventory-counting system after nine months across 11,000+ stores. Six lessons on why the AI met its vendor's accuracy claims on paper but still failed on the floor."
+citation: "Nanda, C. S., & Kondapaka, P. (2026). Starbucks and the AI inventory rollback: Computer vision failure and IT governance in physical retail. Journal of Information Technology Teaching Cases, 1–5. https://doi.org/10.1177/20438869261495570"
 ---
 
 Today's case: a teaching case on Starbucks' nine-month deployment, and eventual
 retirement, of an AI-powered computer vision inventory system.
-
-**Source:** Nanda, C. S., & Kondapaka, P. (2026). Starbucks and the AI inventory
-rollback: Computer vision failure and IT governance in physical retail.
-*Journal of Information Technology Teaching Cases*, 1–5.
-[https://doi.org/10.1177/20438869261495570](https://doi.org/10.1177/20438869261495570)
 
 ## What happened
 

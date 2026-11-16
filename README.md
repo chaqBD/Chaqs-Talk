@@ -15,6 +15,7 @@ Built as a static Jekyll site and published with GitHub Pages.
    categories: ["Literature Review"]   # or ["Case Study"]
    tags: [demand-forecasting, machine-learning]
    excerpt: "One or two sentences shown on the homepage."
+   citation: "Full reference of the paper/case, shown under the title."
    ---
    ```
 
@@ -25,10 +26,6 @@ Built as a static Jekyll site and published with GitHub Pages.
      as a large italic quote.
 4. Commit and push to `main` — GitHub Pages rebuilds the site automatically.
    There is no build step to run yourself.
-
-Two example posts in `_posts/` show both formats (Literature Review and Case
-Study) — delete or replace them once you have real content, they're clearly
-marked as placeholders.
 
 ## Local preview (optional)
 
