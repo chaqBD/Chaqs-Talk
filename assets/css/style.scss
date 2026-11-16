@@ -1,0 +1,278 @@
+---
+---
+:root {
+  --bg: #faf6ef;
+  --bg-raised: #f3ecdf;
+  --ink: #2b2420;
+  --ink-soft: #5a5048;
+  --accent: #8a3b2b;
+  --accent-soft: #c96a4f;
+  --sage: #4a5d4e;
+  --border: #e3d9c4;
+  --serif: "Lora", Georgia, "Times New Roman", serif;
+  --body: "Source Serif 4", Georgia, serif;
+  --mono: "JetBrains Mono", Menlo, Consolas, monospace;
+  --max-width: 720px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1b1815;
+    --bg-raised: #241f1a;
+    --ink: #ece4d6;
+    --ink-soft: #b9ad9c;
+    --accent: #e3876a;
+    --accent-soft: #f0a98f;
+    --sage: #8fae93;
+    --border: #3a332b;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 18px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+}
+.skip-link:focus {
+  left: 12px;
+  top: 12px;
+  background: var(--bg-raised);
+  padding: 8px 12px;
+  border-radius: 4px;
+  z-index: 10;
+}
+
+/* Header */
+.site-header {
+  border-bottom: 1px solid var(--border);
+  padding: 48px 0 20px;
+  margin-bottom: 48px;
+}
+.site-title {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: 2rem;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+}
+.site-title:hover { text-decoration: none; opacity: 0.85; }
+.site-tagline {
+  margin: 6px 0 18px;
+  color: var(--ink-soft);
+  font-style: italic;
+  font-size: 1rem;
+}
+.site-nav a {
+  margin-right: 20px;
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ink-soft);
+}
+.site-nav a:hover { color: var(--accent); }
+
+/* Footer */
+.site-footer {
+  border-top: 1px solid var(--border);
+  margin-top: 64px;
+  padding: 24px 0 60px;
+  color: var(--ink-soft);
+  font-size: 0.85rem;
+}
+
+/* Home intro */
+.intro {
+  color: var(--ink-soft);
+  font-size: 1.05rem;
+  margin-bottom: 40px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid var(--border);
+}
+
+/* Post list */
+.post-list { list-style: none; margin: 0; padding: 0; }
+.post-list-item {
+  padding: 32px 0;
+  border-bottom: 1px solid var(--border);
+}
+.post-list-item:first-child { padding-top: 0; }
+.post-list-link { color: inherit; display: block; }
+.post-list-link:hover { text-decoration: none; }
+.post-list-link:hover .post-list-title { color: var(--accent); }
+.post-list-title {
+  font-family: var(--serif);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 10px 0 6px;
+  transition: color 0.15s ease;
+}
+.post-excerpt { color: var(--ink-soft); margin: 10px 0; }
+.read-more {
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* Badges */
+.post-badges { margin-bottom: 4px; }
+.badge {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 3px 9px;
+  border-radius: 999px;
+  background: var(--bg-raised);
+  color: var(--sage);
+  border: 1px solid var(--border);
+  margin-right: 6px;
+}
+.badge--literature-review { color: var(--sage); }
+.badge--case-study { color: var(--accent); }
+
+/* Post meta */
+.post-meta {
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+/* Single post */
+.post-title {
+  font-family: var(--serif);
+  font-size: 2.1rem;
+  line-height: 1.25;
+  margin: 10px 0 10px;
+}
+.post-header { margin-bottom: 40px; }
+.post-content h2 {
+  font-family: var(--serif);
+  font-size: 1.4rem;
+  margin: 2.2em 0 0.6em;
+}
+.post-content h3 {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  margin: 1.8em 0 0.5em;
+}
+.post-content p { margin: 1.1em 0; }
+.post-content img { max-width: 100%; border-radius: 4px; }
+.post-content code {
+  font-family: var(--mono);
+  font-size: 0.85em;
+  background: var(--bg-raised);
+  padding: 0.15em 0.4em;
+  border-radius: 3px;
+}
+.post-content pre {
+  background: var(--bg-raised);
+  padding: 16px;
+  border-radius: 6px;
+  overflow-x: auto;
+}
+.post-content pre code { background: none; padding: 0; }
+
+/* Callouts */
+blockquote {
+  margin: 1.6em 0;
+  padding: 0.2em 1.2em;
+  border-left: 3px solid var(--border);
+  color: var(--ink-soft);
+}
+.key-points {
+  background: var(--bg-raised);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--sage);
+  border-radius: 6px;
+  padding: 1.2em 1.4em 1.2em 2em;
+  margin: 1.8em 0;
+}
+.key-points li { margin: 0.4em 0; }
+
+.pull-quote {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.3rem;
+  line-height: 1.5;
+  color: var(--ink);
+  border-left: 3px solid var(--accent);
+  padding: 0.2em 0 0.2em 1.2em;
+  margin: 1.8em 0;
+}
+
+.placeholder-notice {
+  background: var(--bg-raised);
+  border: 1px dashed var(--accent-soft);
+  border-left: 4px solid var(--accent);
+  border-radius: 6px;
+  padding: 1em 1.3em;
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+}
+.placeholder-notice p { margin: 0; }
+
+/* Tags */
+.post-tags { margin-top: 48px; }
+.tag {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+  margin-right: 12px;
+}
+
+.post-nav { margin-top: 40px; }
+.post-nav a {
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+  font-family: var(--mono);
+  font-size: 0.85rem;
+}
+.page-count { color: var(--ink-soft); }
+
+@media (max-width: 600px) {
+  body { font-size: 17px; }
+  .site-header { padding-top: 32px; }
+  .site-title { font-size: 1.6rem; }
+  .post-title { font-size: 1.7rem; }
+}

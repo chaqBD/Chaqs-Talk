@@ -1,0 +1,18 @@
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+.bundle/
+vendor/
+.DS_Store
+Gemfile.lock
+
+# Personal research materials — not part of the public blog, never commit these
+/FULL-PAPER-DOWNLOADED/
+/READING-PAPERS/
+/collected-literatures-1/
+/collected-literatures-2/
+/SHAKIR-PROPOSAL-v2-19-10-2026.pdf
+/Unpacking_of_Theories-27-10-2026.docx
+*.pdf
+*.docx

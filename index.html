@@ -1,0 +1,41 @@
+---
+layout: default
+title: Home
+---
+<div class="intro">
+  <p>A running log of notable findings from the supply chain &amp; operations research literature, and real-world cases of AI applied to supply chain problems — read while working on my doctoral research.</p>
+</div>
+
+<ul class="post-list">
+  {% for post in paginator.posts %}
+  <li class="post-list-item">
+    <a class="post-list-link" href="{{ post.url | relative_url }}">
+      {% if post.categories.size > 0 %}
+      <div class="post-badges">
+        {% for cat in post.categories %}
+        <span class="badge badge--{{ cat | slugify }}">{{ cat }}</span>
+        {% endfor %}
+      </div>
+      {% endif %}
+      <h2 class="post-list-title">{{ post.title }}</h2>
+      <p class="post-meta">
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
+      </p>
+      <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 40 }}</p>
+      <span class="read-more">Read more &rarr;</span>
+    </a>
+  </li>
+  {% endfor %}
+</ul>
+
+{% if paginator.total_pages > 1 %}
+<nav class="pagination">
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path | relative_url }}">&larr; Newer</a>
+  {% endif %}
+  <span class="page-count">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path | relative_url }}">Older &rarr;</a>
+  {% endif %}
+</nav>
+{% endif %}

@@ -1,0 +1,50 @@
+title: "Chaqs' Talk"
+tagline: "Notes on AI in Supply Chain Analytics"
+description: >-
+  A doctoral research journal by Shakir — notable findings from the literature,
+  and real-world cases of AI solving supply chain and operations problems.
+author:
+  name: Shakir
+
+url: "https://chaqbd.github.io"
+baseurl: "/Chaqs-Talk"
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+permalink: /:year/:month/:day/:title/
+
+collections_dir: ""
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Shakir"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+feed:
+  path: feed.xml
+
+paginate: 8
+paginate_path: "/page/:num/"
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
+  - node_modules
