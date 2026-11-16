@@ -262,6 +262,12 @@ blockquote {
 }
 .placeholder-notice p { margin: 0; }
 
+.comments {
+  margin-top: 56px;
+  padding-top: 40px;
+  border-top: 1px solid var(--border);
+}
+
 /* Tags */
 .post-tags { margin-top: 48px; }
 .tag {
