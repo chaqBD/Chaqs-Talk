@@ -77,11 +77,11 @@ a:hover { text-decoration: underline; }
   gap: 20px;
 }
 .site-avatar {
-  width: 64px;
-  height: 64px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
   object-fit: cover;
-  border: 2px solid var(--border);
+  border: 1px solid var(--border);
   flex-shrink: 0;
 }
 .site-title {
@@ -306,5 +306,5 @@ blockquote {
   .site-header { padding-top: 32px; }
   .site-title { font-size: 1.6rem; }
   .post-title { font-size: 1.7rem; }
-  .site-avatar { width: 48px; height: 48px; }
+  .site-avatar { width: 28px; height: 28px; }
 }
