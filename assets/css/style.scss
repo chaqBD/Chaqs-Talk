@@ -151,6 +151,12 @@ a:hover { color: var(--blue-deep); text-decoration: underline; }
   transition: color 0.15s ease;
 }
 .post-list-item:hover .post-list-title { color: var(--blue); }
+.post-list-citation {
+  font-size: 0.85rem;
+  font-style: italic;
+  color: var(--ink-soft);
+  margin: 0 0 10px;
+}
 .post-excerpt { color: var(--ink-soft); margin: 0 0 10px; }
 .read-more {
   font-size: 0.8rem;

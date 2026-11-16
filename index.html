@@ -17,6 +17,9 @@ title: Home
           <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
         </p>
         <h2 class="post-list-title">{{ post.title }}</h2>
+        {% if post.citation %}
+        <p class="post-list-citation">{{ post.citation }}</p>
+        {% endif %}
         <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 35 }}</p>
         <span class="read-more">Read more &rarr;</span>
       </div>
